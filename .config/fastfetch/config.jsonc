@@ -1,0 +1,152 @@
+// Inspired by Catnap
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "windows", //"C:/Users/rossf/winlogo1.png",
+        //"type": "sixel",
+	"height": 18,
+        "padding": {
+            "top": 3,
+	    "left": 3
+        },
+        "color": {
+            "1": "cyan",
+            "2": "magenta",
+            "3": "magenta",
+            "4": "cyan"
+        }
+    },
+    "display": {
+        "separator": "   ",
+        "color": {
+	    "separator": "37"
+	},
+        "constants": [
+            "──────────────", // {$1}, used in Custom module
+	    "           "
+        ],
+        "key": {
+            "paddingLeft": 3
+        }
+    },
+    "modules": [
+	"break",
+	{
+	    "type": "title",
+	    "format": "{$2}[    {user-name-colored}{at-symbol-colored}{host-name-colored}    {#37}]",
+	    "color": {
+	    	"user": "italic_cyan",
+	    	"at": "38",
+	    	"host": "italic_magenta"
+	    }
+	},
+        "break", 
+	{
+            "type": "custom",
+            "format": "┌{$1}────── SYSTEM ──────{$1}┐",
+	    "outputColor": "italic_37"
+        },
+        {
+            "key": "{icon} ",
+            "type": "os",
+	    "format": "{3}",
+	    "keyColor": "cyan",
+	    "outputColor": "cyan"
+        },
+        {
+            "key": " ",
+            "type": "kernel",
+	    "keyColor": "cyan",
+	    "outputColor": "cyan"
+	},
+	{
+            "key": "󰏖 ",
+            "type": "packages",
+	    "keyColor": "cyan",
+	    "outputColor": "cyan"
+        },
+        {
+            "key": " ",
+            "type": "shell",
+	    "keyColor": "cyan",
+	    "outputColor": "cyan"
+        },
+        {
+            "key": "󰖩 ",
+            "type": "wifi",
+            "format": "{ssid}",
+	    "keyColor": "cyan",
+	    "outputColor": "cyan"
+        },
+        {
+            "type": "command",
+            "key": " ",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+            "keyColor": "cyan",
+	    "outputColor": "cyan"
+        },
+        {
+            "key": "󰔛 ",
+            "type": "uptime",
+	    "keyColor": "cyan",
+	    "outputColor": "cyan"
+        },
+        {
+            "type": "custom",
+            "format": "└{$1}────────────────────{$1}┘",
+	    "outputColor": "37"
+        },
+	"break",
+	{
+            "type": "custom", 
+            "format": "┌{$1}───── HARDWARE ─────{$1}┐",
+	    "outputColor": "italic_37"
+        },
+	{
+            "key": "󰍛 ",
+            "type": "cpu",
+	    "format": "{1}",
+	    "keyColor": "magenta",
+	    "outputColor": "magenta"
+        },
+        {
+            "key": "󰢮 ",
+            "type": "gpu",
+            "format": "{2}", 
+	    "keyColor": "magenta",
+	    "outputColor": "magenta"
+        },
+        {
+            "key": " ",
+            "type": "memory", 
+	    "keyColor": "magenta",
+	    "outputColor": "magenta"
+        },
+        {
+            "key": "󰯍 ",
+            "type": "swap", 
+	    "keyColor": "magenta",
+	    "outputColor": "magenta"
+        },
+        {
+            "key": "󰉉 ",
+            "type": "disk",
+            "keyColor": "magenta",
+	    "outputColor": "magenta"
+        },
+        {
+            "type": "custom",
+            "format": "└{$1}────────────────────{$1}┘",
+	    "outputColor": "37"
+        },
+	"break",
+	{
+            "type": "custom",
+            "format": "{$2}[ {#38} ● {#37} ● {#36} ● {#35} ● {#34} ● {#33} ● {#32} ● {#31} ● {#37} ]"
+        },
+	"break"
+    ]
+}        
+
+
+//└────────────────────────────────────────────────┘
