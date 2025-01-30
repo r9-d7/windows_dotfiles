@@ -39,6 +39,8 @@
         battery: { type: 'battery' },
         memory: { type: 'memory' },
         weather: { type: 'weather' },
+        audio: { type: 'audio' },
+        media: { type: 'media' }
       });
 
       createRoot(document.getElementById('root')).render(<App />);
@@ -123,10 +125,21 @@
           }
         }
 
+        // Get icon to show for current volume level.
+        function getVolumeIcon(audioOutput) {
+          if (audioOutput.defaultPlaybackDevice.volume > 50)
+            return <i className="nf nf-md-volume_high"></i>;
+          if (audioOutput.defaultPlaybackDevice.volume > 10)
+            return <i className="nf nf-md-volume_medium"></i>;
+          if (audioOutput.defaultPlaybackDevice.volume > 0)
+            return <i className="nf nf-md-volume_low"></i>;
+          if (audioOutput.defaultPlaybackDevice.volume == 0)
+            return <i className="nf nf-md-volume_mute"></i>;
+        }
+
+
         return (
           <div className="app">
-            
-
             <div className="left">
               {output.glazewm && (          
                 <div className="workspaces">
@@ -145,6 +158,19 @@
                   ))}
                 </div>
               )}
+
+              <div className="media"> 
+                <div className="media-text">
+                  {output.media?.currentSession?.title?.length > 20 ? `${output.media.currentSession.title.substring(0, 20)}...` : output.media?.currentSession?.title} - {output.media?.currentSession?.artist} 
+                </div>
+                <button
+                  className={`media-button nf ${output.media?.currentSession?.isPlaying === true ? 'nf-fa-play' : 'nf-fa-pause'}`}
+                  onClick={() => 
+                    output.media?.togglePlayPause()
+                  }
+                ></button> 
+              </div>
+
             </div>
 
             <div className="center">{output.date?.formatted}</div>
@@ -173,6 +199,13 @@
                     }
                   ></button>
                 </>
+              )}
+
+              {output.audio?.defaultPlaybackDevice && (
+                <div className="audio">
+                  {getVolumeIcon(output.audio)}
+                  {output.audio.defaultPlaybackDevice.volume}%
+                </div>
               )}
 
               {output.network && (

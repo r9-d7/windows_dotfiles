@@ -9,7 +9,7 @@ i {
 }
 
 body {
-  color: rgb(255 157 100 / 90%);
+  color: rgb(224 176 104);  
   font-family: "CaskaydiaCove Nerd Font";
   font-size: 14px;
   font-weight: bold;
@@ -60,6 +60,7 @@ body,
 
 .binding-mode,
 .tiling-direction,
+.audio,
 .network,
 .memory,
 .cpu {
@@ -67,15 +68,15 @@ body,
 }
 
 .network {
-  color: rgb(224 176 104);
-}
-
-.memory {
   color: rgb(158 206 106);
 }
 
-.cpu {
+.memory {
   color: rgb(42 195 222);
+}
+
+.cpu {
+  color: rgb(122 162 247);
 }
 
 .weather {
@@ -85,6 +86,7 @@ body,
 .workspaces {
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 
 .workspace {
@@ -108,12 +110,17 @@ body,
 
 .binding-mode,
 .tiling-direction {
-  background: rgb(255 157 100 / 15%);
-  color: rgb(255 157 100);
-  border-radius: 10px;
-  line-height: 1;
-  padding: 4px 8px;
+  background: rgb(255 157 100 / 20%);
   border: 0;
+  color: rgb(255 157 100);
+  border-radius: 8px;
+  line-height: 1;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-bottom: 0px;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -134,4 +141,33 @@ body,
   font-size: 7px;
   left: -8px;
   top: 3px;
+}
+
+.media {
+  background: rgb(24 24 37 / 0%);
+  color: #c0caf5;
+  display: flex;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.media-button {
+  color: #c0caf5;
+  border: 0;
+  background: rgb(24 24 37);
+  margin-left: 8px;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.media-text {
+  font-size: 12px;
+  border: 0;
+  background: rgb(192 202 245 / 15%);
+  padding-top: 6px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+  margin-bottom: 2px;
 }
