@@ -35,7 +35,7 @@
         network: { type: 'network' },
         glazewm: { type: 'glazewm' },
         cpu: { type: 'cpu' },
-        date: { type: 'date', formatting: 'EEE d MMM t' },
+        date: { type: 'date', formatting: 'EEE MMM d, t' },
         battery: { type: 'battery' },
         memory: { type: 'memory' },
         weather: { type: 'weather' },
@@ -125,6 +125,8 @@
 
         return (
           <div className="app">
+            
+
             <div className="left">
               {output.glazewm && (          
                 <div className="workspaces">

@@ -40,7 +40,7 @@ general:
   config_reload_commands: []
 
   # Whether to automatically focus windows underneath the cursor.
-  focus_follows_cursor: true
+  focus_follows_cursor: false
 
   # Whether to switch back and forth between the previously focused
   # workspace when focusing the current workspace.
@@ -89,7 +89,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: '#8dbcff'
+      color: '#cba6f7'
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
@@ -107,7 +107,7 @@ window_effects:
   other_windows:
     border:
       enabled: true
-      color: '#a1a1a1'
+      color: '#181825'
     hide_title_bar:
       enabled: false
     corner_style:
@@ -141,23 +141,23 @@ window_behavior:
 
 workspaces:
   - name: "1"
-    display_name: " "
+    display_name: "󰲠 "
   - name: "2"
-    display_name: " "
+    display_name: "󰲢 "
   - name: "3"
-    display_name: " "
+    display_name: "󰲤 "
   - name: "4"
-    display_name: " "
+    display_name: "󰲦 "
   - name: "5"
-    display_name: " "
+    display_name: "󰲨 "
   - name: "6"
-    display_name: " "
+    display_name: "󰲪 "
   - name: "7"
-    display_name: " "
+    display_name: "󰲬 "
   - name: "8"
-    display_name: " "
+    display_name: "󰲮 "
   - name: "9"
-    display_name: " "
+    display_name: "󰲰 "
 
 
 window_rules:
@@ -282,8 +282,8 @@ keybindings:
   # Terminal and Git Bash respectively.
   - commands: ['shell-exec wt']
     bindings: ['alt+`']
-  - commands: ['shell-exec wt debian']
-    bindings: ['alt+d']
+  - commands: ['shell-exec wt wsl -d Debian']
+    bindings: ['alt+shift+`']
   - commands: ['shell-exec firefox']
     bindings: ['alt+b']
   - commands: ['shell-exec explorer']

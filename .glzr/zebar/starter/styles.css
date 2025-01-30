@@ -9,7 +9,7 @@ i {
 }
 
 body {
-  color: rgb(187 154 247 / 90%);
+  color: rgb(255 157 100 / 90%);
   font-family: "CaskaydiaCove Nerd Font";
   font-size: 14px;
   font-weight: bold;
@@ -23,7 +23,7 @@ body,
 }
 
 #root {
-  border-bottom: 1px solid rgb(24 24 37 / 5%);
+  /*border: 1px solid rgb(24 24 37 / 5%);*/
   background: rgb(24 24 37);
   border-radius: 10px;
   margin-right: 20px;
@@ -36,7 +36,7 @@ body,
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   height: 100%;
-  padding: 4px 8px;
+  padding: 4px 4px;
 }
 
 .left,
@@ -48,20 +48,38 @@ body,
 
 .center {
   justify-self: center;
+  margin-bottom: 2px;
+  color: rgb(247 118 142);
 }
 
 .right {
   justify-self: end;
-  margin-right: 8px;
+  margin-right: 10px;
+  margin-bottom: 2px;
 }
 
 .binding-mode,
 .tiling-direction,
 .network,
 .memory,
-.cpu,
-.battery {
-  margin-right: 20px;
+.cpu {
+  margin-right: 25px;
+}
+
+.network {
+  color: rgb(224 176 104);
+}
+
+.memory {
+  color: rgb(158 206 106);
+}
+
+.cpu {
+  color: rgb(42 195 222);
+}
+
+.weather {
+  color: rgb(187 154 247);
 }
 
 .workspaces {
@@ -72,10 +90,11 @@ body,
 .workspace {
   background: rgb(24 24 37 / 5%);
   margin-right: 4px;
-  color: rgb(187 154 247 / 90%);/*rgb(116 199 236 / 90%);*/
+  color: rgb(203 166 247 / 90%);/*rgb(116 199 236 / 90%);*/
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 24px;
 
   &.displayed {
     color: rgb(148 226 213 / 90%);
@@ -89,8 +108,8 @@ body,
 
 .binding-mode,
 .tiling-direction {
-  background: rgb(255 255 255 / 15%);
-  color: rgb(187 154 257 / 90%);
+  background: rgb(255 157 100 / 15%);
+  color: rgb(255 157 100);
   border-radius: 10px;
   line-height: 1;
   padding: 4px 8px;
