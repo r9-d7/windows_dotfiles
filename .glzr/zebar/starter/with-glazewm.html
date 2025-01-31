@@ -161,14 +161,26 @@
 
               <div className="media"> 
                 <div className="media-text">
-                  {output.media?.currentSession?.title?.length > 20 ? `${output.media.currentSession.title.substring(0, 20)}...` : output.media?.currentSession?.title} - {output.media?.currentSession?.artist} 
+                  {output.media?.currentSession?.title?.length > 30 ? `${output.media.currentSession.title.substring(0, 30)}...` : output.media?.currentSession?.title} - {output.media?.currentSession?.artist} 
                 </div>
                 <button
-                  className={`media-button nf ${output.media?.currentSession?.isPlaying === true ? 'nf-fa-play' : 'nf-fa-pause'}`}
+                  className={`media-back nf nf-fa-step_backward`}
+                  onClick={() => 
+                    output.media?.previous()
+                  }
+                ></button>
+                <button
+                  className={`media-button nf ${output.media?.currentSession?.isPlaying === true ? 'nf-fa-pause' : 'nf-fa-play'}`}
                   onClick={() => 
                     output.media?.togglePlayPause()
                   }
-                ></button> 
+                ></button>
+                <button
+                  className={`media-next nf nf-fa-step_forward`}
+                  onClick={() => 
+                    output.media?.next()
+                  }
+                ></button>
               </div>
 
             </div>

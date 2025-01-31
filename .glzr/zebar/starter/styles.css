@@ -25,10 +25,10 @@ body,
 #root {
   border: 3px solid rgb(49 50 68);
   background: rgb(17 17 27);
-  border-radius: 12px;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-top: 10px;
+  border-radius: 10px;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 8px;
 }
 
 .app {
@@ -50,7 +50,7 @@ body,
   justify-self: center;
   margin-bottom: 2px;
   color: rgb(247 118 142);
-  background: rgb(247 118 142 / 10%);
+  background: rgb(247 118 142 / 0%);
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 10px;
@@ -80,28 +80,28 @@ body,
 
 .audio {
   color: rgb(224 176 104);
-  background: rgb(224 176 104 / 10%);
+  background: rgb(224 176 104 / 0%);
   
 }
 
 .network {
   color: rgb(158 206 106);
-  background: rgb(158 206 106 / 10%);
+  background: rgb(158 206 106 / 0%);
 }
 
 .memory {
   color: rgb(42 195 222);
-  background: rgb(42 195 222 / 10%);
+  background: rgb(42 195 222 / 0%);
 }
 
 .cpu {
   color: rgb(122 162 247);
-  background: rgb(122 162 247 / 10%); 
+  background: rgb(122 162 247 / 0%); 
 }
 
 .weather {
   color: rgb(187 154 247);
-  background: rgb(187 154 247 / 10%);
+  background: rgb(187 154 247 / 0%);
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 10px;
@@ -136,7 +136,7 @@ body,
 
 .binding-mode,
 .tiling-direction {
-  background: rgb(255 157 100 / 10%);
+  background: rgb(255 157 100 / 0%);
   border: 0;
   color: rgb(255 157 100);
   border-radius: 7px;
@@ -174,13 +174,41 @@ body,
   color: rgb(180 249 248);
   display: flex;
   align-items: center;
-  margin-left: 3px;
+  margin-left: 6px;
 }
 
 .media-button {
   color: rgb(180 249 248);
   border: 0;
-  background: rgb(180 249 248 / 10%);
+  background: rgb(180 249 248 / 0%);
+  margin-left: 6px;
+  font-size: 18px;
+  margin-bottom: 1px;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 7px;
+}
+
+.media-next {
+  color: rgb(180 249 248);
+  border: 0;
+  background: rgb(180 249 248 / 0%);
+  margin-left: 6px;
+  font-size: 18px;
+  margin-bottom: 1px;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 7px;
+}
+
+.media-back {
+  color: rgb(180 249 248);
+  border: 0;
+  background: rgb(180 249 248 / 0%);
   margin-left: 10px;
   font-size: 18px;
   margin-bottom: 1px;
